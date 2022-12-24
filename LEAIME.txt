@@ -1,0 +1,117 @@
+
+
+PRIMEIRO DESAFIO
+
+Considerando a entrada de valores inteiros não negativos, ordene estes valores segundo
+o seguinte critério:
+• Primeiro os Pares
+• Depois os Ímpares
+Sendo que deverão ser apresentados os pares em ordem crescente e depois os ímpares
+em ordem decrescente.
+Entrada
+A primeira linha de entrada contém um único inteiro positivo N (1 < N <= 105) Este é o
+número de linhas de entrada que vem logo a seguir. As próximas N linhas conterão, cada
+uma delas, um valor inteiro não negativo.
+Saída
+Apresente todos os valores lidos na entrada segundo a ordem apresentada acima. Cada
+número deve ser impresso em uma linha, conforme exemplo abaixo.
+
+Entradas: 
+10
+4
+32
+34
+543
+3456
+654
+567
+87
+6789
+98
+
+Saída:
+4
+32
+34
+98
+654
+3456
+6789
+567
+543
+87
+
+
+
+
+
+ArrayList<int> numerosPares = new ArrayList<int>();
+
+ArrayList<int> numerosImpares = new ArrayList<int>();
+
+// Função para adicionar número na lista de números impares ou pares conforme condição
+public adicionarNumeroNaLista(int numero){
+	 // Verifica se o resto da divisão é 0.... se sim, o número é par
+	 if(numero % 2 == 0){
+		numerosPares.add(numero);
+	 } 
+    else{
+		numerosImpares.add(numero);
+	}
+}
+
+public ordenacaoCrescente (ArrayList<int> lista){
+	
+}
+
+public ordenacaoDecrescente (ArrayList<int> lista){
+	
+}
+
+
+if(numero > = 1 || numero <= pow(10, 5)){
+	adicionarNumeroNaLista(numero);
+	ordenacaoCrescente(numero);
+	ordenacaoDecrescente(numerosImpares);
+	ordenacaoCrescente(numerosPares);
+
+}else{
+	print("Este número não está dentro dos valores esperados");
+}
+
+int arr[] = {12, 11, 13, 5, 6};
+
+n = 4; last = 5; j= 2; {5, 11, 12, 13, 6};
+n = 3; last = 13; j=1;{11, 12, 13, 5, 6};df
+n = 2; last= 11; j=0; {11, 12, 13, 5, 6};
+=
+
+
+public class Exercicio1
+{
+    // Recursive function to sort an array using
+    // insertion sort
+    static void insertionSortRecursive(int arr[], int n)
+    {
+        // Base case
+        if (n <= 1)
+            return;
+      
+        // Sort first n-1 elements
+        insertionSortRecursive( arr, n-1 );
+      
+        // Insert last element at its correct position
+        // in sorted array.
+        int last = arr[n-1];
+        int j = n-2;
+      
+        /* Move elements of arr[0..i-1], that are
+          greater than key, to one position ahead
+          of their current position */
+        while (j >= 0 && arr[j] > last)
+        {
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = last;
+    }
